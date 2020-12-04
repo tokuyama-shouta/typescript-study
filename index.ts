@@ -22,7 +22,6 @@ let hasValue2 = true;
 
 
 //オブジェクトに型をつける
-
 const person: {
   name: string;
   age: number;
@@ -31,3 +30,8 @@ const person: {
   age: 21
 }
 console.log(person.name)
+
+
+//配列に型をつける
+const fruits: string[] = ['Apple','Banana','Grape']
+
