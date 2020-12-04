@@ -20,3 +20,14 @@ let back: string = `hello`;
 //型推論の書き方↓ できるだけこちらを使う
 let hasValue2 = true;
 
+
+//オブジェクトに型をつける
+
+const person: {
+  name: string;
+  age: number;
+} = {
+  name: 'Jack',
+  age: 21
+}
+console.log(person.name)
