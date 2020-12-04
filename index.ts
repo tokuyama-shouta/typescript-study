@@ -1,6 +1,8 @@
 
 //TypeScript Study
 
+//型注釈の書き方↓
+
 //boolean(真偽値)
 let hasValue: boolean = true;
 
@@ -13,4 +15,8 @@ let negative: number = -0.12;
 let single: string = 'hello';
 let double: string = "hello";
 let back: string = `hello`;
+
+
+//型推論の書き方↓ できるだけこちらを使う
+let hasValue2 = true;
 
