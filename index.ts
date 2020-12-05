@@ -60,3 +60,12 @@ const coffee  = {
 coffee.size = CoffeeSize.SHORT
 console.log(CoffeeSize.SHORT)
 
+
+//どんな型にもなるany型
+//なるべく使わないようにする
+let anything: any = true;
+anything = 'hello';
+anything = ['hello',33,true];
+anything = {};
+let banana = 'banana';
+banana = anything;
