@@ -43,3 +43,20 @@ const book: [string, number, boolean] = ['business',1500,false];
 //出力の時にエラーが出る。
 book.push(1)
 
+//Enum 
+//特定のまとまったグループを入れる
+
+enum CoffeeSize {
+  SHORT = 'SHORT',
+  TALL = 'TALL',
+  GRANDE = 'GRANDE',
+  VENTI = 'VENTI'
+}
+
+const coffee  = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+coffee.size = CoffeeSize.SHORT
+console.log(CoffeeSize.SHORT)
+
