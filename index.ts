@@ -90,3 +90,9 @@ const cloth: {
 //typeエイリアスを使って複雑な型を変数のように扱う
 type ClothSize = 'small' | 'medium' | 'large'
 
+//関数に型を適応させる
+//戻り値には型推論は聞かない、戻り値にはきく
+function add(num1: number,num2: number): number {
+  return num1 + num2
+}
+add(1,2);
