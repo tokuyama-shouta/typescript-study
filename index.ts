@@ -129,3 +129,10 @@ text = anyInput;
 if(typeof unknownInput === 'string') {
   text = unknownInput
 }
+
+//never型を使って、起こり得ない値の型を使用する方法
+//決して何も返さない
+function error(message: string): never{
+  throw new Error(message);
+}
+console.log(error('This is an error'));
