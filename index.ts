@@ -116,3 +116,16 @@ function doubleAndHandle(num: number, cb: (num: number) => number): void {
 doubleAndHandle(21,doubleNum => {
   return doubleNum
 });
+
+//unknown型を使って柔軟でanyよりも厳しい型を定義する方法
+//unknownは使う時に
+let unknownInput: unknown;
+let text: string;
+let anyInput: any;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+if(typeof unknownInput === 'string') {
+  text = unknownInput
+}
