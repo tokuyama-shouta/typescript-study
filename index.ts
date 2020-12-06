@@ -96,3 +96,10 @@ function add(num1: number,num2: number): number {
   return num1 + num2
 }
 add(1,2);
+
+//関数の戻り値にVoid型を使う方法
+//何も返さない
+//undefaindはリターンがある時のみ、基本使わない
+function sayHello(): void {
+  console.log('Hello');
+}
