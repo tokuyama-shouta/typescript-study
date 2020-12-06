@@ -69,3 +69,9 @@ anything = ['hello',33,true];
 anything = {};
 let banana = 'banana';
 banana = anything;
+
+// Union型 複数の型を使う
+let unionType: number | string = 10;
+unionType = 'Hello';
+let unionTypes: (number | string)[] = [21,'Hello']
+
