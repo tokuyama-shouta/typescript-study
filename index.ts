@@ -87,3 +87,6 @@ const cloth: {
   size: 'medium'
 }
 
+//typeエイリアスを使って複雑な型を変数のように扱う
+type ClothSize = 'small' | 'medium' | 'large'
+
