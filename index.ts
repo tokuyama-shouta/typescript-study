@@ -103,3 +103,7 @@ add(1,2);
 function sayHello(): void {
   console.log('Hello');
 }
+
+//関数型を使って、特定の関数のみ代入できる変数を作る
+const anotherAdd: (n1: number, n2: number) => number = add;
+const doubleNumber = (num: number): number => num * 2;
