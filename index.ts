@@ -75,3 +75,15 @@ let unionType: number | string = 10;
 unionType = 'Hello';
 let unionTypes: (number | string)[] = [21,'Hello']
 
+//Literal型を使って特定の値のみ取り扱う
+//unipn型と同時に使うと便利
+const apple: 'apple' = 'apple';
+let clothSize: 'small' | 'medium' | 'large' = 'large';
+const cloth: {
+  color: string,
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: 'medium'
+}
+
