@@ -107,3 +107,12 @@ function sayHello(): void {
 //関数型を使って、特定の関数のみ代入できる変数を作る
 const anotherAdd: (n1: number, n2: number) => number = add;
 const doubleNumber = (num: number): number => num * 2;
+
+//callback関数の型はこうかく
+function doubleAndHandle(num: number, cb: (num: number) => number): void {
+  const doubleNum = cb(num * 2);
+  console.log(doubleNum);
+}
+doubleAndHandle(21,doubleNum => {
+  return doubleNum
+});
