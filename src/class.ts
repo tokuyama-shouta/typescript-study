@@ -5,16 +5,17 @@ class Person {
   constructor(initName: string) {
     this.name = initName;
   }
-  
-  greeting(this: {name: string}) {
+
+  greeting(this: Person) {
     console.log(`Hello! My name is ${this.name}`);
-}
+  }
 }
 
+let Person2: Person;
 const quill = new Person('Quill');
 quill.greeting();
 const anotherQuill = {
     name: 'anotherQuill',
-    anotherGreeting: quill.greeting
+    greeting: quill.greeting
 }
-anotherQuill.anotherGreeting();
+anotherQuill.greeting();
