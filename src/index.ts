@@ -7,7 +7,7 @@
 let hasValue: boolean = true;
 
 //number(数値)
-let count: number = 10;
+let count: number = 11;
 let float: number = 3.14;
 let negative: number = -0.12;
 
