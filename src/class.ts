@@ -1,5 +1,5 @@
 
-class Person {
+abstract class Person {
 
   static species = 'Homo sapiens'
   static isAdult(age: number) {
@@ -16,10 +16,15 @@ class Person {
 
   greeting(this: Person) {
     console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`);
+    this.explainJob();
   }
+  abstract explainJob(): void;
 }
 
 class Teacher extends Person {
+  explainJob(){
+    console.log(`I am a teacher and I teach ${this.subject}`)
+  }
   get subject() {
 
     if(!this._subject){
@@ -42,6 +47,6 @@ class Teacher extends Person {
 
 }
 
-console.log(Person.species);
-console.log(Person.isAdult(38));
+const teacher = new Teacher('Quill',38,'Math');
+teacher.greeting();
 
