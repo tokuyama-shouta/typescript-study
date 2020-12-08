@@ -1,7 +1,7 @@
 
 class Person {
 
-  constructor(public name: string,private age: number) {
+  constructor(public name: string,protected age: number) {
   }
 
   incrementAge(){
