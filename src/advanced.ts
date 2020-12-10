@@ -80,3 +80,16 @@ const designer: Designer = {
   role: 'web'
 }
 
+interface DowmloadData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  }
+}
+const downloadedData: DowmloadData = {
+  id: 1
+}
+console.log(downloadedData.user?.name?.first)
