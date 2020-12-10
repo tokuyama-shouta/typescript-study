@@ -92,4 +92,5 @@ interface DowmloadData {
 const downloadedData: DowmloadData = {
   id: 1
 }
-console.log(downloadedData.user?.name?.first)
+console.log(downloadedData.user?.name?.first);
+const userData = downloadedData.user ?? 'no-user';
