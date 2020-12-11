@@ -135,8 +135,15 @@ let target = function(a: string, b: string) {}
 let source = function(a: string) {}
 target = source;
 
-function advancedFn(...args: readonly [number, string, boolean?, ...number[]]) {
+function advancedFn(...args: readonly number[]) {
 }
-advancedFn(0, 'hi', true,3,3,3,3)
+advancedFn(0, 1)
+const milk = 'milk' as const;
+let drink = milk;
+const array = [10,20] as const;
+const peter = {
+  name: 'Peter',
+  age: 38
+} as const;
 
 
