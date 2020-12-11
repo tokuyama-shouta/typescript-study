@@ -25,7 +25,11 @@ function toUpperCase(x: string | number): string | number {
   }
   return x;
 }
-const upperHello = toUpperCase('hello');
+interface TmpFunc {
+  (x: string): number;
+  (x: number): number;
+}
+const upperHello: TmpFunc = function (x: string | number) { return 0};
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker){
@@ -95,3 +99,21 @@ const downloadedData: DownloadedData = {
 console.log(downloadedData.user?.name?.first);
 const userData = downloadedData.user ?? 'no-user';
 type id = DownloadedData[ "id" | "user"]
+
+enum Color {
+  RED,
+  BLUE
+}
+class AdvancedPerson {
+  name: string = 'Peter'
+  age: number = 35;
+}
+class AdvancedCar {
+  name: string = 'Prius'
+  age: number = 5;
+}
+let target = function(a: string, b: string) {}
+let source = function(a: string) {}
+target = source;
+
+
