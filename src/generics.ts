@@ -22,3 +22,12 @@ stringLightDatabase.add('Apple');
 stringLightDatabase.add('Banana');
 stringLightDatabase.add('Greap');
 stringLightDatabase.remove('Banana');
+
+interface TmpDatabase<T> {
+  id: number;
+  data: T[];
+}
+const tmpDatabase: TmpDatabase<number> = {
+  id: 3,
+  data: [32]
+}
