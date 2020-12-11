@@ -135,4 +135,8 @@ let target = function(a: string, b: string) {}
 let source = function(a: string) {}
 target = source;
 
+function advancedFn(...args: [number, string, boolean?, ...number[]]) {
+}
+advancedFn(0, 'hi', true,3,3,3,3)
+
 
