@@ -1,10 +1,12 @@
 
-function Logging(constructor: Function) {
-  console.log('Logging...');
-  console.log(constructor);
+function Logging(message: string) {
+  return function (constructor: Function){
+    console.log(message);
+    console.log(constructor);
+  }
 }
 
-@Logging
+@Logging('Logging user')
 class User {
   name = 'Quill';
   constructor() {
@@ -12,3 +14,5 @@ class User {
   }
 }
 const user1 = new User();
+const user2 = new User();
+const user3 = new User();
