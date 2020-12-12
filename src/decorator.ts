@@ -22,8 +22,16 @@ function Component(template: string, selector: string){
   }
 }
 
-function PropertyLogging(target: any, prorettyKey: string) {
-
+function PropertyLogging(target: any, propertyKey: string) {
+  console.log('propertyLogging');
+  console.log(target);
+  console.log(propertyKey)
+}
+function MethodLogging(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  console.log('MethodLogging');
+  console.log(target);
+  console.log(propertyKey)
+  console.log(descriptor)
 }
 
 @Component('<h1>{{ name }}</h1>', '#app')
@@ -33,6 +41,10 @@ class User {
   name = 'Quill';
   constructor(public age: number) {
     console.log('User was created!');
+  }
+  @MethodLogging
+  greeting() {
+    console.log('Hello');
   }
 }
 const user1 = new User(32);
